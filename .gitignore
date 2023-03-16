@@ -1,0 +1,3 @@
+Pipfile*
+src/xcn_translate.egg-info/*
+dist/*

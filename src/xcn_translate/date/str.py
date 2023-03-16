@@ -18,11 +18,12 @@ def dtime2str_ms(dtime):
 def dtime2str_brief(dtime):
     return dtime.strftime(DATETIME_FORMAT_BRIEF)
 
-def str_ms_2dtime(str_val):
-    return datetime.datetime.strptime(str_val, DATETIME_FORMAT_MS)
-
 def str_2dtime(str_val):
-    return datetime.datetime.strptime(str_val, DATETIME_FORMAT)
+    try:
+        return datetime.datetime.strptime(str_val, DATETIME_FORMAT)
+    except:
+        pass
+    return datetime.datetime.strptime(str_val, DATETIME_FORMAT_MS)
 
 def timestamp2dtime(timestamp):
     return datetime.datetime.fromtimestamp(timestamp)
