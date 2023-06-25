@@ -2,4 +2,5 @@ Pipfile*
 src/xcn_translate.egg-info/*
 dist/*
 .DS_Store
+.idea
 
