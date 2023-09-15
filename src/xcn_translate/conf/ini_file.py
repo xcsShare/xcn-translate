@@ -122,6 +122,7 @@ class IniFile(object):
 
         _file = new_ini_file if new_ini_file is not None and len(new_ini_file)>4 else self.__ini_file_path
 
-        with open(_file, 'w') as new_file:
-            self.__parser_obj.write(new_file)
+        if _file:
+            with open(_file, 'w') as new_file:
+                self.__parser_obj.write(new_file)
 
