@@ -22,7 +22,7 @@ class xPsUtil:
 
 
 if __name__ == "__main__":
-    pList = process_list("notepad")
+    pList = process_list("python")
     for p in pList:
         cl = p.cmdline()
         print(cl)
