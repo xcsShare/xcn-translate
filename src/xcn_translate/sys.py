@@ -10,3 +10,13 @@ def get_platform(self):
         return 'win64' if platform.architecture()[0] == '64bit' else 'win32'
     else:
         raise ValueError(f"Unsupported platform: {system_name}")
+
+def update_sys_path_with__file(file_o):
+    import sys
+    from pathlib import Path
+    folder_path = None
+    if file_o:
+        folder_path = str(Path(file_o).absolute().parent)
+        if folder_path not in sys.path:
+            sys.path.append(folder_path)
+    return folder_path
